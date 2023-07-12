@@ -1,0 +1,25 @@
+﻿@model Casgem_CodeFirstProject.DAL.Entities.Guide
+
+@{
+    ViewBag.Title = "UpdateGuide";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>Rehber Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.GuideId, new { @class = "form-control" })
+    <br />
+    <label>Rehber Ad Soyad</label>
+    @Html.TextBoxFor(x => x.GuideName, new { @class = "form-control" })
+    <br />
+    <label>Rehber Unvan</label>
+    @Html.TextBoxFor(x => x.GuideTitle, new { @class = "form-control" })
+    <br />
+    <label>Rehber Fotoğraf</label>
+    @Html.TextBoxFor(x => x.GuideImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Rehberi Güncelle</button>
+    <a href="/AdminGuide/Index/" class="btn btn-secondary">Değişikliklerden Vazgeç</a>
+</form>
+

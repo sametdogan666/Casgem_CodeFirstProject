@@ -6,7 +6,7 @@
         public string SocialMediaName { get; set; }
         public string SocialMediaUrl { get; set; }
         public int GuideId { get; set; }
-        public Guide Guide { get; set; }
+        public virtual Guide Guide { get; set; }
 
     }
 }

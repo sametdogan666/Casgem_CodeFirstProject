@@ -127,8 +127,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminContactController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AdminGuideController.cs" />
+    <Compile Include="Controllers\AdminMessageController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -137,10 +140,12 @@
     <Compile Include="DAL\Context\TravelContext.cs" />
     <Compile Include="DAL\Entities\Admin.cs" />
     <Compile Include="DAL\Entities\Booking.cs" />
+    <Compile Include="DAL\Entities\CompanyContact.cs" />
     <Compile Include="DAL\Entities\Contact.cs" />
     <Compile Include="DAL\Entities\Destination.cs" />
     <Compile Include="DAL\Entities\Guide.cs" />
     <Compile Include="DAL\Entities\SocialMedia.cs" />
+    <Compile Include="DAL\Entities\Specification.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -151,6 +156,14 @@
     <Compile Include="Migrations\202307121200101_mig_add_admin_entity.cs" />
     <Compile Include="Migrations\202307121200101_mig_add_admin_entity.designer.cs">
       <DependentUpon>202307121200101_mig_add_admin_entity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307121847015_mig_companyContact_table_added.cs" />
+    <Compile Include="Migrations\202307121847015_mig_companyContact_table_added.designer.cs">
+      <DependentUpon>202307121847015_mig_companyContact_table_added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307121915061_mig_companyContact_addMapColumn.cs" />
+    <Compile Include="Migrations\202307121915061_mig_companyContact_addMapColumn.designer.cs">
+      <DependentUpon>202307121915061_mig_companyContact_addMapColumn.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -204,6 +217,9 @@
     <Content Include="Templates\bootstrap-sidebar-03\sidebar-03\js\jquery.min.js" />
     <Content Include="Templates\bootstrap-sidebar-03\sidebar-03\js\main.js" />
     <Content Include="Templates\bootstrap-sidebar-03\sidebar-03\js\popper.js" />
+    <Content Include="Templates\colorlib-error-404-17\css\style.css" />
+    <Content Include="Templates\colorlib-error-404-17\index.html" />
+    <Content Include="Templates\colorlib-error-404-17\readme.txt" />
     <Content Include="Templates\go-trip-starter\about.html" />
     <Content Include="Templates\go-trip-starter\assets\css\style-starter.css" />
     <Content Include="Templates\go-trip-starter\assets\fonts\fontawesome-webfont.svg" />
@@ -274,7 +290,6 @@
     <Content Include="Views\Default\PartialHeader.cshtml" />
     <Content Include="Views\Default\PartialBooking.cshtml" />
     <Content Include="Views\Default\PartialMainFeature.cshtml" />
-    <Content Include="Views\Default\PartialDestinations.cshtml" />
     <Content Include="Views\Default\PartialTopDestinations.cshtml" />
     <Content Include="Views\Default\PartialExplore.cshtml" />
     <Content Include="Views\Default\PartialClient.cshtml" />
@@ -392,6 +407,12 @@
     <Content Include="Views\Error\Page404.cshtml" />
     <Content Include="Views\SocialMedia\Index.cshtml" />
     <Content Include="Views\SocialMedia\AddSocialMedia.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\AdminContact\Index.cshtml" />
+    <Content Include="Views\AdminContact\UpdateContact.cshtml" />
+    <Content Include="Views\AdminMessage\Index.cshtml" />
+    <Content Include="Views\AdminMessage\MessageDetails.cshtml" />
+    <Content Include="Views\Default\PartialSpecification.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -430,6 +451,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307121200101_mig_add_admin_entity.resx">
       <DependentUpon>202307121200101_mig_add_admin_entity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307121847015_mig_companyContact_table_added.resx">
+      <DependentUpon>202307121847015_mig_companyContact_table_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307121915061_mig_companyContact_addMapColumn.resx">
+      <DependentUpon>202307121915061_mig_companyContact_addMapColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

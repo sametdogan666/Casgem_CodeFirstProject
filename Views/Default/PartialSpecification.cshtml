@@ -1,0 +1,38 @@
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.Specification>
+
+<section class="w3l-specification-6">
+    <div class="specification-layout editContent">
+        <div class="container-fluid">
+            <div class="row text-left img-grids">
+                <div class="col-lg-6 p-0">
+                    @foreach (var item in ViewBag.specMain)
+                    {
+                        <div class="images-right" style=" background: url(@item.SpecificationImageUrl ); background-repeat: no-repeat; background-position: center; ">
+                            <div class="p-md-5 p-3">
+                                <h4><a href="#url">@item.SpecificationTitle</a></h4>
+                                <p>@item.SpecificationDescription</p>
+
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="col-lg-6 p-0">
+                    <div class="four-grids">
+                        @foreach(var item in Model){
+                        <div class="images-text">
+                            <div class="ser-bg2" style=" background: url(@item.SpecificationImageUrl ); background-repeat: no-repeat; background-position: center; ">
+                                <div class="p-md-5 p-3">
+                                    <h4><a href="#url">@item.SpecificationTitle</a></h4>
+                                    <p>@item.SpecificationDescription </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

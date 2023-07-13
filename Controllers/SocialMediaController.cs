@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Casgem_CodeFirstProject.DAL.Entities;
+using System.Xml.Linq;
 
 namespace Casgem_CodeFirstProject.Controllers
 {
@@ -29,6 +31,14 @@ namespace Casgem_CodeFirstProject.Controllers
             ViewBag.v = values;
 
             return View();
+        }
+        [HttpPost]
+        public ActionResult AddSocialMedia(SocialMedia socialMedia)
+        {
+            _travelContext.SocialMedias.Add(socialMedia);
+            _travelContext.SaveChanges();
+
+            return RedirectToAction("Index");
         }
     }
 }

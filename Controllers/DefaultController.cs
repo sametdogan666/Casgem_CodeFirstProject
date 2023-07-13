@@ -1,12 +1,14 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using Casgem_CodeFirstProject.DAL.Context;
+using Casgem_CodeFirstProject.DAL.Entities;
 
 namespace Casgem_CodeFirstProject.Controllers
 {
     public class DefaultController : Controller
     {
-        TravelContext _travelContext = new TravelContext();
+        private readonly TravelContext _travelContext = new TravelContext();
 
         public ActionResult Index()
         {
@@ -25,6 +27,7 @@ namespace Casgem_CodeFirstProject.Controllers
 
         public PartialViewResult PartialHeader()
         {
+            ViewBag.companyPhone = _travelContext.CompanyContacts.Select(x => x.PhoneNumber).FirstOrDefault();
             return PartialView();
         }
 
@@ -38,16 +41,23 @@ namespace Casgem_CodeFirstProject.Controllers
             return PartialView();
         }
 
-        public PartialViewResult PartialDestinations()
+        public PartialViewResult PartialSpecification()
         {
-            return PartialView();
+            List<Specification> specifications = new List<Specification>();
+            specifications = _travelContext.Specifications.Where(x => x.IsMainFeature == true).ToList();
+            ViewBag.specMain = specifications;
+
+            var values = _travelContext.Specifications.Where(x => x.IsMainFeature == false).ToList();
+            
+            return PartialView(values);
         }
 
         public PartialViewResult PartialTopDestinations()
         {
-            var values = _travelContext.Destinations.ToList();
+            var values = _travelContext.Destinations.OrderByDescending(t => t.DestinationId).Take(3).ToList();
 
             return PartialView(values);
+
         }
 
         public PartialViewResult PartialExplore()

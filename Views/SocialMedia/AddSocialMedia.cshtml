@@ -9,13 +9,15 @@
 
 <form method="post">
     <label>Sosyal Medya Adı</label>
-    @Html.TextBoxFor(x=>x.SocialMediaName, new {@class = "form-control"})
-    <br/>
+    @Html.TextBoxFor(x => x.SocialMediaName, new { @class = "form-control" })
+    <br />
     <label>Sosyal Medya Linki</label>
-    @Html.TextBoxFor(x=>x.SocialMediaUrl, new {@class = "form-control"})
-    <br/>
+    @Html.TextBoxFor(x => x.SocialMediaUrl, new { @class = "form-control" })
+    <br />
     <label>Rehber</label>
-    @Html.DropDownListFor(x=>x.Guide.GuideId, (List<SelectListItem>)ViewBag.v, "Rehber Seçiniz", new {@class = "form-control"})
-    <br/>
+    @Html.DropDownListFor(x => x.Guide.GuideId, (List<SelectListItem>)ViewBag.v,  new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Sosyal Medyayı Kaydet</button>
+    <a href="/SocialMedia/Index/" class="btn btn-warning">Değişikliklerden Vazgeç</a>
 </form>
 

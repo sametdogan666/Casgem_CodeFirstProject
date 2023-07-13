@@ -1,0 +1,32 @@
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.Contact>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+    int count = 0;
+}
+
+<h2>Gelen Kutusu</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Gönderen</th>
+        <th>Konu</th>
+        <th>Sil</th>
+        <th>Mesajı Aç</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Subject</td>
+            <td><a href="/AdminMessage/DeleteMessage/@item.ContactId" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/AdminMessage/MessageDetails/@item.ContactId" class="btn btn-outline-dark">Mesajı Aç</a></td>
+        </tr>
+    }
+</table>
+

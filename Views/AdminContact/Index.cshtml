@@ -1,0 +1,45 @@
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.CompanyContact>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>İletişim İşlemleri</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Açıklama</th>
+        <th>Telefon Numarası</th>
+        <th>Mail Adresi</th>
+        <th>Adres</th>
+        <th>Harita Konumu</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td id="cumle">@item.Description</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.Email</td>
+            <td>@item.Location</td>
+            <td id="cumle2">@item.MapLocation</td>
+            <td><a href="/AdminContact/UpdateContact/@item.Id" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<script>
+  var cumleElementi = document.getElementById('cumle');
+  var cumleMetni = cumleElementi.innerHTML;
+  var kisaltilmisCumle = cumleMetni.substring(0, 30);
+  cumleElementi.innerHTML = kisaltilmisCumle;
+</script>
+<script>
+    var cumleElementi = document.getElementById('cumle2');
+    var cumleMetni = cumleElementi.innerHTML;
+    var kisaltilmisCumle = cumleMetni.substring(0, 30);
+    cumleElementi.innerHTML = kisaltilmisCumle;
+</script>

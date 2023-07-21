@@ -8,7 +8,7 @@ namespace Casgem_CodeFirstProject.Controllers
     [Authorize]
     public class AdminGuideController : Controller
     {
-        TravelContext _travelContext = new TravelContext();
+        private readonly TravelContext _travelContext = new TravelContext();
 
         public ActionResult Index()
         {

@@ -1,0 +1,36 @@
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.Client>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Müşteri Kısmı İşlemleri</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Müşteri Kısmı Başlık</th>
+        <th>Müşteri Kısmı Açıklaması</th>
+        <th>Resim</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ClientId</td>
+            <td>@item.ClientTitle</td>
+            <td>@item.ClientDescription</td>
+            <td>@item.ClientImageUrl</td>
+            <td><a href="/AdminClient/UpdateClient/@item.ClientId" class="btn btn-outline-success">Güncelle</a></td>
+            <td><a href="/AdminClient/DeleteClient/@item.ClientId" class="btn btn-outline-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+@if (ViewBag.countClient == 0)
+{
+    <a href="/AdminClient/AddClient" class="btn btn-outline-primary">Yeni Müşteri Kısmı Ekle</a>
+}
+
+

@@ -1,0 +1,27 @@
+﻿@model Casgem_CodeFirstProject.DAL.Entities.Specification
+
+@{
+    ViewBag.Title = "AddSpecification";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Özellik Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Özellik Başlık</label>
+    @Html.TextBoxFor(x => x.SpecificationTitle, new { @class = "form-control" })
+    <br />
+    <label>Özellik Açıklama</label>
+    @Html.TextBoxFor(x => x.SpecificationDescription, new { @class = "form-control" })
+    <br />
+    <label>Özellik Fotoğraf</label>
+    @Html.TextBoxFor(x => x.SpecificationImageUrl, new { @class = "form-control" })
+    <br />
+    <label>Ana Özellik Mi</label>
+    @Html.TextBoxFor(x => x.IsMainFeature, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Rehberi Kaydet</button>
+    <a href="/AdminClient/Index/" class="btn btn-secondary">Değişikliklerden Vazgeç</a>
+</form>
+
+

@@ -13,6 +13,7 @@ namespace Casgem_CodeFirstProject.DAL.Context
         public DbSet<Admin> Admins { get; set; }
         public DbSet<CompanyContact> CompanyContacts { get; set; }
         public DbSet<Specification> Specifications { get; set; }
+        public DbSet<Client> Clients { get; set; }
 
 
 

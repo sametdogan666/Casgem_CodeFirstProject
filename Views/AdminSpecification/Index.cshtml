@@ -1,0 +1,39 @@
+﻿
+@model List<Casgem_CodeFirstProject.DAL.Entities.Specification>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Özellik İşlemleri</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Özellik Adı</th>
+        <th>Özellik Açıklaması</th>
+        <th>Resim</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SpecificationId</td>
+            <td>@item.SpecificationTitle</td>
+            <td>@item.SpecificationDescription</td>
+            <td>@item.SpecificationImageUrl</td>
+            <td><a href="/AdminSpecification/UpdateSpecification/@item.SpecificationId" class="btn btn-outline-success">Güncelle</a></td>
+            <td><a href="/AdminSpecification/DeleteSpecification/@item.SpecificationId" class="btn btn-outline-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+
+@if (ViewBag.countSpecification == 0)
+{
+    <a href="/AdminSpecification/AddSpecification" class="btn btn-outline-primary">Yeni Özellik Ekle</a>
+}
+
+
+
+

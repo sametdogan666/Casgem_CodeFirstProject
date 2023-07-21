@@ -127,10 +127,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminClientController.cs" />
     <Compile Include="Controllers\AdminContactController.cs" />
-    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AdminGuideController.cs" />
     <Compile Include="Controllers\AdminMessageController.cs" />
+    <Compile Include="Controllers\AdminSpecificationController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
@@ -140,6 +141,7 @@
     <Compile Include="DAL\Context\TravelContext.cs" />
     <Compile Include="DAL\Entities\Admin.cs" />
     <Compile Include="DAL\Entities\Booking.cs" />
+    <Compile Include="DAL\Entities\Client.cs" />
     <Compile Include="DAL\Entities\CompanyContact.cs" />
     <Compile Include="DAL\Entities\Contact.cs" />
     <Compile Include="DAL\Entities\Destination.cs" />
@@ -295,7 +297,6 @@
     <Content Include="Views\Default\PartialClient.cshtml" />
     <Content Include="Views\Default\PartialFooter.cshtml" />
     <Content Include="Views\Default\PartialScripts.cshtml" />
-    <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Templates\bootstrap-sidebar-03\sidebar-03\.DS_Store" />
     <Content Include="Templates\bootstrap-sidebar-03\sidebar-03\css\.DS_Store" />
     <Content Include="Templates\bootstrap-sidebar-03\sidebar-03\css\bootstrap\.DS_Store" />
@@ -411,8 +412,14 @@
     <Content Include="Views\AdminContact\Index.cshtml" />
     <Content Include="Views\AdminContact\UpdateContact.cshtml" />
     <Content Include="Views\AdminMessage\Index.cshtml" />
-    <Content Include="Views\AdminMessage\MessageDetails.cshtml" />
     <Content Include="Views\Default\PartialSpecification.cshtml" />
+    <Content Include="Views\AdminSpecification\Index.cshtml" />
+    <Content Include="Views\AdminSpecification\UpdateSpecification.cshtml" />
+    <Content Include="Views\AdminClient\Index.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\AdminClient\AddClient.cshtml" />
+    <Content Include="Views\AdminClient\UpdateClient.cshtml" />
+    <Content Include="Views\AdminSpecification\AddSpecification.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

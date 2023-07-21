@@ -1,0 +1,23 @@
+﻿@model Casgem_CodeFirstProject.DAL.Entities.Client
+
+@{
+    ViewBag.Title = "AddClient";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Müşteri Kısmı Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Müşteri Kısmı Başlık</label>
+    @Html.TextBoxFor(x => x.ClientTitle, new { @class = "form-control" })
+    <br />
+    <label>Müşteri Kısmı Açıklama</label>
+    @Html.TextBoxFor(x => x.ClientDescription, new { @class = "form-control" })
+    <br />
+    <label>Müşteri Kısmı Fotoğraf</label>
+    @Html.TextBoxFor(x => x.ClientImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Rehberi Kaydet</button>
+    <a href="/AdminClient/Index/" class="btn btn-secondary">Değişikliklerden Vazgeç</a>
+</form>
+

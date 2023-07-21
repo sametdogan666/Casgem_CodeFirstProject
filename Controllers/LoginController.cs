@@ -32,5 +32,13 @@ namespace Casgem_CodeFirstProject.Controllers
             }
 
         }
+
+        [HttpGet]
+        public ActionResult LogOut()
+        {
+            Session.Clear();
+
+            return RedirectToAction("Index");
+        }
     }
 }

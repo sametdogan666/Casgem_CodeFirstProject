@@ -1,0 +1,26 @@
+﻿@model Casgem_CodeFirstProject.DAL.Entities.Specification
+
+@{
+    ViewBag.Title = "UpdateSpecification";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Özellik Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.SpecificationId, new { @class = "form-control" })
+    <br />
+    <label>Özellik Başlığı</label>
+    @Html.TextBoxFor(x => x.SpecificationTitle, new { @class = "form-control" })
+    <br />
+    <label>Özellik Açıklaması</label>
+    @Html.TextBoxFor(x => x.SpecificationDescription, new { @class = "form-control" })
+    <br />
+    <label>Resim Yolu</label>
+    @Html.TextBoxFor(x => x.SpecificationImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Özelliği Güncelle</button>
+    <a href="/AdminSpecification/Index/" class="btn btn-secondary">Değişikliklerden Vazgeç</a>
+</form>
+
+

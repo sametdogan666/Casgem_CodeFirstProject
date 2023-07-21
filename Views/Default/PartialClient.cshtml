@@ -1,11 +1,16 @@
-﻿<section class="w3l-clients" id="client">
-    <div class="call-w3">
-        <div class="container text-center">
-            <div class="title-head">
-                <h3>We are with you at every <br>stage of your journey</h3>
-                <p>Fugit tempora dolor dolore recusandae aut at cum autem esse neque. Consequuntur dolor sequi nulla corrupti blanditiis similique</p>
-                <a class="btn btn-theme2 mt-lg-5 mt-4" href="contact.html">Book Your Travel</a>
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.Client>
+
+@foreach (var item in ViewBag.client)
+{
+    <section class="w3l-clients" id="client" style="background: url(@item.ClientImageUrl);background-repeat: no-repeat; background-position: center;   background-size: cover;">
+        <div class="call-w3">
+            <div class="container text-center">
+                <div class="title-head">
+                    <h3>@item.ClientTitle</h3>
+                    <p>@item.ClientDescription</p>
+                    <a class="btn btn-theme2 mt-lg-5 mt-4" href="/Contact/Index/">Seyahatinizi Ayırtın</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+}

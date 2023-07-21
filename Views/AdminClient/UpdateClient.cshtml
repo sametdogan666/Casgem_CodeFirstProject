@@ -1,0 +1,27 @@
+﻿@model Casgem_CodeFirstProject.DAL.Entities.Client
+
+@{
+    ViewBag.Title = "UpdateClient";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Müşteri Kısmı Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ClientId, new { @class = "form-control" })
+    <br />
+    <label>Müşteri Kısmı Başlık</label>
+    @Html.TextBoxFor(x => x.ClientTitle, new { @class = "form-control" })
+    <br />
+    <label>Müşteri Kısmı Açıklama</label>
+    @Html.TextBoxFor(x => x.ClientDescription, new { @class = "form-control" })
+    <br />
+    <label>Müşteri Kısmı Fotoğraf</label>
+    @Html.TextBoxFor(x => x.ClientImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Müşteri Kısmını Güncelle</button>
+    <a href="/AdminGuide/Index/" class="btn btn-secondary">Değişikliklerden Vazgeç</a>
+</form>
+
+
+

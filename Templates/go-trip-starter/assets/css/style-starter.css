@@ -3672,7 +3672,7 @@
   grid-template-columns: 1fr 1fr; }
 
 .w3l-specification-6 .ser-bg1 {
-  background: url(../images/b8.jpg) no-repeat center;
+  background: url(/Templates/go-trip-starter/assets/images/b2.jpg) no-repeat center;
   background-size: cover;
   min-height: 400px;
   position: relative;
@@ -3780,8 +3780,6 @@
     min-height: 200px; } }
 
 .w3l-clients .call-w3 {
-  background: url(../images/3.jpg) no-repeat center;
-  background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

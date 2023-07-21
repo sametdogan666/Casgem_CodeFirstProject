@@ -1,29 +1,27 @@
-﻿using System.Linq;
+﻿using Casgem_CodeFirstProject.DAL.Context;
+using System.Linq;
 using System.Web.Mvc;
-using Casgem_CodeFirstProject.DAL.Context;
 
 namespace Casgem_CodeFirstProject.Controllers
 {
     [Authorize]
-    public class AdminMessageController : Controller
+    public class AdminBookingController : Controller
     {
         private readonly TravelContext _travelContext = new TravelContext();
-
         public ActionResult Index()
         {
-            var values = _travelContext.Contacts.ToList();
+            var values = _travelContext.Bookings.ToList();
 
             return View(values);
         }
 
-        public ActionResult DeleteMessage(int id)
+        public ActionResult DeleteBooking(int id)
         {
-            var value = _travelContext.Contacts.Find(id);
-            _travelContext.Contacts.Remove(value);
+            var value = _travelContext.Bookings.Find(id);
+            _travelContext.Bookings.Remove(value);
             _travelContext.SaveChanges();
 
             return RedirectToAction("Index");
         }
-
     }
 }

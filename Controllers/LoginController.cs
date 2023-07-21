@@ -24,7 +24,7 @@ namespace Casgem_CodeFirstProject.Controllers
             {
                 FormsAuthentication.SetAuthCookie(value.UserName, false);
                 Session["userTravel"] = value.UserName.ToString();
-                return RedirectToAction("Index", "AdminGuide");
+                return RedirectToAction("Index", "AdminBooking");
             }
             else
             {

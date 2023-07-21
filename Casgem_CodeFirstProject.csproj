@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminBookingController.cs" />
     <Compile Include="Controllers\AdminClientController.cs" />
     <Compile Include="Controllers\AdminContactController.cs" />
     <Compile Include="Controllers\AdminGuideController.cs" />
@@ -420,6 +421,7 @@
     <Content Include="Views\AdminClient\AddClient.cshtml" />
     <Content Include="Views\AdminClient\UpdateClient.cshtml" />
     <Content Include="Views\AdminSpecification\AddSpecification.cshtml" />
+    <Content Include="Views\AdminBooking\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

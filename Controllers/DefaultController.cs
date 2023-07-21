@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Casgem_CodeFirstProject.DAL.Context;
@@ -36,8 +37,18 @@ namespace Casgem_CodeFirstProject.Controllers
             return PartialView();
         }
 
+        [HttpGet]
         public PartialViewResult PartialBooking()
         {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public PartialViewResult PartialBooking(Booking booking)
+        {
+            _travelContext.Bookings.Add(booking);
+            _travelContext.SaveChanges();
+
             return PartialView();
         }
 

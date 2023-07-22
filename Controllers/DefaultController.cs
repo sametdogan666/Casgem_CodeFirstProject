@@ -73,6 +73,10 @@ namespace Casgem_CodeFirstProject.Controllers
 
         public PartialViewResult PartialExplore()
         {
+            List<Explore> explore = new List<Explore>();
+            explore = _travelContext.Explores.ToList();
+            ViewBag.explore = explore;
+
             return PartialView();
         }
 
@@ -90,6 +94,11 @@ namespace Casgem_CodeFirstProject.Controllers
             List<CompanyContact> companyContacts = new List<CompanyContact>();
             companyContacts = _travelContext.CompanyContacts.Where(x => x.Id == 1).ToList();
             ViewBag.comContact = companyContacts;
+
+            List<Footer> footers = new List<Footer>();
+            footers = _travelContext.Footers.Where(x => x.Id == 1).ToList();
+            ViewBag.foot = footers;
+
             return PartialView();
         }
 

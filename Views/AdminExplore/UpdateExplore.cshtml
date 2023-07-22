@@ -1,0 +1,29 @@
+﻿@model Casgem_CodeFirstProject.DAL.Entities.Explore
+
+@{
+    ViewBag.Title = "UpdateExplore";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Keşfet Kısmı Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.Id, new { @class = "form-control" })
+    <br />
+    <label>Küçük Başlık</label>
+    @Html.TextBoxFor(x => x.SmallTitle, new { @class = "form-control" })
+    <br />
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Fotoğraf</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Keşfet Kısmını Güncelle</button>
+    <a href="/AdminExplore/Index/" class="btn btn-secondary">Değişikliklerden Vazgeç</a>
+</form>
+
+

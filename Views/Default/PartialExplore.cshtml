@@ -1,22 +1,47 @@
-﻿<section class="w3l-teams-15">
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.Explore>
+
+<section class="w3l-teams-15">
     <div class="team-single-main editContent">
         <div class="container">
-
+            
+        @foreach (var item in ViewBag.explore)
+        {
             <div class="row">
                 <div class="column2 col-lg-6">
 
-                    <img src="~/Templates/go-trip-starter/assets/images/b1.jpg" alt="product" class="img-responsive ">
+                    <img src="@item.ImageUrl" alt="product" class="img-responsive ">
                 </div>
                 <div class="nature-row  coloum4 col-lg-6">
-                    <h6 class="small-title">Explore</h6>
-                    <h3>Exclusive vacation Packages and Travel services for you. </h3>
+                    <h6 class="small-title">@item.SmallTitle</h6>
+                    <h3>@item.Title</h3>
                     <p class="para editContent text ">
-                        Moll itia placeat modi expl icabo volup tatum corporis unde Dicta, provident
-                        Rem adipisci Moll itia placeat modi volup tatem tenetur conse quatur.Conseq tenetur conse quatur adipi sicing elit.
+                        @item.Description                    
                     </p>
-                    <a href="about.html" class="action-button btn mt-lg-5 mt-4">Read more</a>
+                    <br/>
+                    <td><button type="button" class="action-button btn mt-lg-5 mt-4" data-toggle="modal" data-target="#exampleModalCenter">Devamını Oku</button></td>
                 </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">@item.Title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            @item.Description
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
         </div>
     </div>
 </section>

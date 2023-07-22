@@ -1,0 +1,38 @@
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.Explore>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Keşfet Kısmı İşlemleri</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Küçük Başlık</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Resim</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.SmallTitle</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.ImageUrl</td>
+            <td><a href="/AdminExplore/UpdateExplore/@item.Id" class="btn btn-outline-success">Güncelle</a></td>
+            <td><a href="/AdminExplore/DeleteExplore/@item.Id" class="btn btn-outline-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+@if (ViewBag.countExplore == 0)
+{
+    <a href="/AdminExplore/AddExplore" class="btn btn-outline-primary">Yeni Müşteri Kısmı Ekle</a>
+}
+
+

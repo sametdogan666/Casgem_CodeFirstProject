@@ -127,9 +127,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminAboutFirstBlogController.cs" />
     <Compile Include="Controllers\AdminBookingController.cs" />
     <Compile Include="Controllers\AdminClientController.cs" />
     <Compile Include="Controllers\AdminContactController.cs" />
+    <Compile Include="Controllers\AdminExploreController.cs" />
     <Compile Include="Controllers\AdminGuideController.cs" />
     <Compile Include="Controllers\AdminMessageController.cs" />
     <Compile Include="Controllers\AdminSpecificationController.cs" />
@@ -140,12 +143,16 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\SocialMediaController.cs" />
     <Compile Include="DAL\Context\TravelContext.cs" />
+    <Compile Include="DAL\Entities\AboutFirstBlog.cs" />
+    <Compile Include="DAL\Entities\AboutSecondBlog.cs" />
     <Compile Include="DAL\Entities\Admin.cs" />
     <Compile Include="DAL\Entities\Booking.cs" />
     <Compile Include="DAL\Entities\Client.cs" />
     <Compile Include="DAL\Entities\CompanyContact.cs" />
     <Compile Include="DAL\Entities\Contact.cs" />
     <Compile Include="DAL\Entities\Destination.cs" />
+    <Compile Include="DAL\Entities\Explore.cs" />
+    <Compile Include="DAL\Entities\Footer.cs" />
     <Compile Include="DAL\Entities\Guide.cs" />
     <Compile Include="DAL\Entities\SocialMedia.cs" />
     <Compile Include="DAL\Entities\Specification.cs" />
@@ -167,6 +174,26 @@
     <Compile Include="Migrations\202307121915061_mig_companyContact_addMapColumn.cs" />
     <Compile Include="Migrations\202307121915061_mig_companyContact_addMapColumn.designer.cs">
       <DependentUpon>202307121915061_mig_companyContact_addMapColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307212058426_mig_footerTable_added.cs" />
+    <Compile Include="Migrations\202307212058426_mig_footerTable_added.designer.cs">
+      <DependentUpon>202307212058426_mig_footerTable_added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307212100043_mig_footerTable_added2.cs" />
+    <Compile Include="Migrations\202307212100043_mig_footerTable_added2.designer.cs">
+      <DependentUpon>202307212100043_mig_footerTable_added2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307220827286_mig_exploreTable_added.cs" />
+    <Compile Include="Migrations\202307220827286_mig_exploreTable_added.designer.cs">
+      <DependentUpon>202307220827286_mig_exploreTable_added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307221013145_mig_tableFirstBlog_added.cs" />
+    <Compile Include="Migrations\202307221013145_mig_tableFirstBlog_added.designer.cs">
+      <DependentUpon>202307221013145_mig_tableFirstBlog_added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307221030231_mig_tableSecondBlog_added.cs" />
+    <Compile Include="Migrations\202307221030231_mig_tableSecondBlog_added.designer.cs">
+      <DependentUpon>202307221030231_mig_tableSecondBlog_added.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -422,6 +449,17 @@
     <Content Include="Views\AdminClient\UpdateClient.cshtml" />
     <Content Include="Views\AdminSpecification\AddSpecification.cshtml" />
     <Content Include="Views\AdminBooking\Index.cshtml" />
+    <Content Include="Views\AdminExplore\Index.cshtml" />
+    <Content Include="Views\AdminExplore\AddExplore.cshtml" />
+    <Content Include="Views\AdminExplore\UpdateExplore.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\About\PartialGuides.cshtml" />
+    <Content Include="Views\About\PartialFirstBlog.cshtml" />
+    <Content Include="Views\About\PartialSecondBlog.cshtml" />
+    <Content Include="Views\About\PartialThirdBlog.cshtml" />
+    <Content Include="Views\AdminAboutFirstBlog\Index.cshtml" />
+    <Content Include="Views\AdminAboutFirstBlog\AddBlog.cshtml" />
+    <Content Include="Views\AdminAboutFirstBlog\UpdateBlog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -466,6 +504,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307121915061_mig_companyContact_addMapColumn.resx">
       <DependentUpon>202307121915061_mig_companyContact_addMapColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307212058426_mig_footerTable_added.resx">
+      <DependentUpon>202307212058426_mig_footerTable_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307212100043_mig_footerTable_added2.resx">
+      <DependentUpon>202307212100043_mig_footerTable_added2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307220827286_mig_exploreTable_added.resx">
+      <DependentUpon>202307220827286_mig_exploreTable_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307221013145_mig_tableFirstBlog_added.resx">
+      <DependentUpon>202307221013145_mig_tableFirstBlog_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307221030231_mig_tableSecondBlog_added.resx">
+      <DependentUpon>202307221030231_mig_tableSecondBlog_added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -14,8 +14,11 @@ namespace Casgem_CodeFirstProject.DAL.Context
         public DbSet<CompanyContact> CompanyContacts { get; set; }
         public DbSet<Specification> Specifications { get; set; }
         public DbSet<Client> Clients { get; set; }
-
-
+        public DbSet<Footer> Footers { get; set; }
+        public DbSet<Explore> Explores { get; set; }
+        public DbSet<AboutFirstBlog> AboutFirstBlogs { get; set; }
+        public DbSet<AboutSecondBlog> AboutSecondBlogs { get; set; }
+        
 
     }
 }

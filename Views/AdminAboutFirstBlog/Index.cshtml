@@ -1,0 +1,37 @@
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.AboutFirstBlog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hakkımda Sayfası Birinci Blog Kısmı İşlemleri</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Resim</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.ImageUrl</td>
+            <td><a href="/AdminAboutFirstBlog/UpdateBlog/@item.Id" class="btn btn-outline-success">Güncelle</a></td>
+            <td><a href="/AdminAboutFirstBlog/DeleteBlog/@item.Id" class="btn btn-outline-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+@if (ViewBag.countExplore == 0)
+{
+    <a href="/AdminAboutFirstBlog/AddBlog" class="btn btn-outline-primary">Yeni Blog Ekle</a>
+}
+
+
+

@@ -1,0 +1,16 @@
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.AboutSecondBlog>
+
+<section class="w3l-stats">
+    <div class="main-w3 ">
+        <div class="container">
+            @foreach(var item in ViewBag.secondBlog){
+                <div class="right-side">
+                    <h3 class="title-big">@item.Title</h3>
+                    <p class="mt-4 para">
+                        @item.Description
+                    </p>
+                </div>
+            }
+        </div>
+    </div>
+</section>

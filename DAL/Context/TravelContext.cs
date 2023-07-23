@@ -19,6 +19,9 @@ namespace Casgem_CodeFirstProject.DAL.Context
         public DbSet<AboutFirstBlog> AboutFirstBlogs { get; set; }
         public DbSet<AboutSecondBlog> AboutSecondBlogs { get; set; }
         public DbSet<AboutThirdBlog> AboutThirdBlogs { get; set; }
+        public DbSet<ServiceInnerService> ServiceInnerServices { get; set; }
+        public DbSet<ServiceOuterService> ServiceOuterServices { get; set; }
+
 
         
 

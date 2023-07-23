@@ -158,6 +158,8 @@
     <Compile Include="DAL\Entities\Explore.cs" />
     <Compile Include="DAL\Entities\Footer.cs" />
     <Compile Include="DAL\Entities\Guide.cs" />
+    <Compile Include="DAL\Entities\ServiceInnerService.cs" />
+    <Compile Include="DAL\Entities\ServiceOuterService.cs" />
     <Compile Include="DAL\Entities\SocialMedia.cs" />
     <Compile Include="DAL\Entities\Specification.cs" />
     <Compile Include="Global.asax.cs">
@@ -202,6 +204,10 @@
     <Compile Include="Migrations\202307231029198_mig_tableAboutThirdBlog_created.cs" />
     <Compile Include="Migrations\202307231029198_mig_tableAboutThirdBlog_created.designer.cs">
       <DependentUpon>202307231029198_mig_tableAboutThirdBlog_created.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307231152579_mig_tableServiceInnerServiceAndtableOuterService_created.cs" />
+    <Compile Include="Migrations\202307231152579_mig_tableServiceInnerServiceAndtableOuterService_created.designer.cs">
+      <DependentUpon>202307231152579_mig_tableServiceInnerServiceAndtableOuterService_created.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -539,6 +545,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307231029198_mig_tableAboutThirdBlog_created.resx">
       <DependentUpon>202307231029198_mig_tableAboutThirdBlog_created.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307231152579_mig_tableServiceInnerServiceAndtableOuterService_created.resx">
+      <DependentUpon>202307231152579_mig_tableServiceInnerServiceAndtableOuterService_created.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

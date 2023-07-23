@@ -129,6 +129,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminAboutFirstBlogController.cs" />
+    <Compile Include="Controllers\AdminAboutSecondBlogController.cs" />
+    <Compile Include="Controllers\AdminAboutThirdBlogController.cs" />
     <Compile Include="Controllers\AdminBookingController.cs" />
     <Compile Include="Controllers\AdminClientController.cs" />
     <Compile Include="Controllers\AdminContactController.cs" />
@@ -141,10 +143,11 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\SocialMediaController.cs" />
+    <Compile Include="Controllers\AdminSocialMediaController.cs" />
     <Compile Include="DAL\Context\TravelContext.cs" />
     <Compile Include="DAL\Entities\AboutFirstBlog.cs" />
     <Compile Include="DAL\Entities\AboutSecondBlog.cs" />
+    <Compile Include="DAL\Entities\AboutThirdBlog.cs" />
     <Compile Include="DAL\Entities\Admin.cs" />
     <Compile Include="DAL\Entities\Booking.cs" />
     <Compile Include="DAL\Entities\Client.cs" />
@@ -194,6 +197,10 @@
     <Compile Include="Migrations\202307221030231_mig_tableSecondBlog_added.cs" />
     <Compile Include="Migrations\202307221030231_mig_tableSecondBlog_added.designer.cs">
       <DependentUpon>202307221030231_mig_tableSecondBlog_added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307231029198_mig_tableAboutThirdBlog_created.cs" />
+    <Compile Include="Migrations\202307231029198_mig_tableAboutThirdBlog_created.designer.cs">
+      <DependentUpon>202307231029198_mig_tableAboutThirdBlog_created.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -434,8 +441,8 @@
     <Content Include="Templates\Report-Login-Free\fonts\fontawesome-webfont.woff2" />
     <Content Include="Templates\Report-Login-Free\fonts\FontAwesome.otf" />
     <Content Include="Views\Error\Page404.cshtml" />
-    <Content Include="Views\SocialMedia\Index.cshtml" />
-    <Content Include="Views\SocialMedia\AddSocialMedia.cshtml" />
+    <Content Include="Views\AdminSocialMedia\Index.cshtml" />
+    <Content Include="Views\AdminSocialMedia\AddSocialMedia.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\AdminContact\Index.cshtml" />
     <Content Include="Views\AdminContact\UpdateContact.cshtml" />
@@ -460,6 +467,12 @@
     <Content Include="Views\AdminAboutFirstBlog\Index.cshtml" />
     <Content Include="Views\AdminAboutFirstBlog\AddBlog.cshtml" />
     <Content Include="Views\AdminAboutFirstBlog\UpdateBlog.cshtml" />
+    <Content Include="Views\AdminAboutSecondBlog\Index.cshtml" />
+    <Content Include="Views\AdminAboutSecondBlog\AddBlog.cshtml" />
+    <Content Include="Views\AdminAboutSecondBlog\UpdateBlog.cshtml" />
+    <Content Include="Views\AdminAboutThirdBlog\Index.cshtml" />
+    <Content Include="Views\AdminAboutThirdBlog\AddBlog.cshtml" />
+    <Content Include="Views\AdminAboutThirdBlog\UpdateBlog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -519,6 +532,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307221030231_mig_tableSecondBlog_added.resx">
       <DependentUpon>202307221030231_mig_tableSecondBlog_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307231029198_mig_tableAboutThirdBlog_created.resx">
+      <DependentUpon>202307231029198_mig_tableAboutThirdBlog_created.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

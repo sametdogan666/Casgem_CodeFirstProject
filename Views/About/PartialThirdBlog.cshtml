@@ -1,16 +1,41 @@
-﻿<section class="w3l-recent-work">
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.AboutSecondBlog>
+
+<section class="w3l-recent-work">
     <div class="jst-two-col">
-        <div class="container">
-            <div class="row">
-                <div class="my-bio cwp4-text col-lg-6">
-                    <h3>Modern and Luxury Architecture and Interior Designers for you</h3>
-                    <p class="para mt-3 mb-lg-4 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, soluta impedit. Consequatur, quasi mollitia? Adipisci exercitationem amet dolore expedita repudiandae voluptatem impedit ipsa vero repellendus? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio molestiae ex aut possimus atque explicabo nostrum recusandae ab quisquam.</p>
-                    <a href="about.html" class="action-button btn mt-4">Read more <span class="fa fa-angle-double-right"></span></a>
-                </div>
-                <div class="col-lg-6 ">
-                    <img src="~/Templates/go-trip-starter/assets/images/b4.jpg" alt="product" class="img-responsive about-me">
+        @foreach (var item in ViewBag.thirdBlog)
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="my-bio cwp4-text col-lg-6">
+                        <h3>@item.Title</h3>
+                        <p class="para mt-3 mb-lg-4 ">@item.Description</p>
+                        <td><button type="button" class="action-button btn mt-lg-5 mt-4" data-toggle="modal" data-target="#exampleModalCenter">Devamını Oku</button></td>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <img src="@item.ImageUrl" alt="product" class="img-responsive about-me">
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">@item.Title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            @item.Description
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </section>

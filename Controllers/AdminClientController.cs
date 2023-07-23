@@ -5,6 +5,7 @@ using System.Web.Mvc;
 
 namespace Casgem_CodeFirstProject.Controllers
 {
+    [Authorize]
     public class AdminClientController : Controller
     {
         private readonly TravelContext _travelContext = new TravelContext();

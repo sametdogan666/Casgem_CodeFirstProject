@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Admin/Index.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
     int count = 0;
 }
 
@@ -22,8 +22,8 @@
             <td>@count</td>
             <td>@item.SocialMediaName</td>
             <td>@item.Guide.GuideName</td>
-            <td><a href="@item.SocialMediaUrl" class="btn btn-outline-success">Siteye Git</a></td>
+            <td><a href="/Default/Index/" class="btn btn-outline-success">Siteye Git</a></td>
         </tr>
     }
 </table>
-<a href="/SocialMedia/AddSocialMedia" class="btn btn-outline-primary">Yeni Sosyal Medya Girişi</a>
+<a href="/AdminSocialMedia/AddSocialMedia/" class="btn btn-outline-primary">Yeni Sosyal Medya Girişi</a>

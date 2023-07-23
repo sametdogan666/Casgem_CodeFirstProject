@@ -18,6 +18,8 @@ namespace Casgem_CodeFirstProject.DAL.Context
         public DbSet<Explore> Explores { get; set; }
         public DbSet<AboutFirstBlog> AboutFirstBlogs { get; set; }
         public DbSet<AboutSecondBlog> AboutSecondBlogs { get; set; }
+        public DbSet<AboutThirdBlog> AboutThirdBlogs { get; set; }
+
         
 
     }

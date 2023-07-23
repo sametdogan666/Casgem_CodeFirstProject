@@ -34,12 +34,18 @@ namespace Casgem_CodeFirstProject.Controllers
 
         public PartialViewResult PartialThirdBlog()
         {
+            List<AboutThirdBlog> aboutThirdBlogs = new List<AboutThirdBlog>();
+            aboutThirdBlogs = _travelContext.AboutThirdBlogs.ToList();
+            ViewBag.thirdBlog = aboutThirdBlogs;
             return PartialView();
         }
 
         public PartialViewResult PartialGuides()
         {
-            return PartialView();
+            var values = _travelContext.Guides.ToList();
+   
+
+            return PartialView(values);
         }
     }
 }

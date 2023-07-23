@@ -1,11 +1,11 @@
-﻿@model List<Casgem_CodeFirstProject.DAL.Entities.AboutFirstBlog>
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.AboutSecondBlog>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Hakkımda Sayfası Birinci Blog Kısmı İşlemleri</h2>
+<h2>Hakkımda Sayfası Ikinci Blog Kısmı İşlemleri</h2>
 
 <table class="table table-bordered">
     <tr>
@@ -23,15 +23,12 @@
             <td>@item.Title</td>
             <td>@item.Description</td>
             <td>@item.ImageUrl</td>
-            <td><a href="/AdminAboutFirstBlog/UpdateBlog/@item.Id" class="btn btn-outline-success">Güncelle</a></td>
-            <td><a href="/AdminAboutFirstBlog/DeleteBlog/@item.Id" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/AdminAboutSecondBlog/UpdateBlog/@item.Id" class="btn btn-outline-success">Güncelle</a></td>
+            <td><a href="/AdminAboutSecondBlog/DeleteBlog/@item.Id" class="btn btn-outline-danger">Sil</a></td>
         </tr>
     }
 </table>
 @if (ViewBag.countBlog == 0)
 {
-    <a href="/AdminAboutFirstBlog/AddBlog" class="btn btn-outline-primary">Yeni Blog Ekle</a>
+    <a href="/AdminAboutSecondBlog/AddBlog" class="btn btn-outline-primary">Yeni Blog Ekle</a>
 }
-
-
-

@@ -1,69 +1,30 @@
-﻿<section class="w3l-team-main-6" id="team">
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.Guide>
+
+<section class="w3l-team-main-6" id="team">
     <!-- /team-grids -->
     <div class="team-content-page editContent ">
 
         <div class="container">
             <div class="row text-center">
-                <div class="col-lg-3 col-md-6 col-sm-6 column">
-                    <a href="#url"><img class="img img-responsive" src="~/Templates/go-trip-starter/assets/images/t1.jpg" alt=""></a>
-                    <h4><a href="#url">John watson</a></h4>
-                    <div class="w3l-team-7_bottom">
-                        <div class="w3l-team-7_bottom-left">
-                            <h6>Founder of company</h6>
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-3 col-md-6 col-sm-6 column">
+                        <img class="img img-responsive" src="@item.GuideImageUrl" alt="">
+                        <br/><br />
+                        <h4 style="color:white">@item.GuideName</h4>
+                        <div class="w3l-team-7_bottom">
+                            <div class="w3l-team-7_bottom-left">
+                                <h6>@item.GuideTitle</h6>
+                            </div>
+                            <ul class="social_7 mt-3">
+                                <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                                <li><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+                                <li><a href="#twitter"><span class="fa fa-instagram"></span></a></li>
+                            </ul>
+                            <div class="clear"></div>
                         </div>
-                        <ul class="social_7 mt-3">
-                            <li><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
-                            <li><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
-                            <li><a href="#twitter"><span class="fa fa-instagram"></span></a></li>
-                        </ul>
-                        <div class="clear"></div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 column">
-                    <a href="#url"><img class="img img-responsive" src="~/Templates/go-trip-starter/assets/images/t2.jpg" alt=""></a>
-                    <h4><a href="#url">Alexander</a></h4>
-                    <div class="w3l-team-7_bottom">
-                        <div class="w3l-team-7_bottom-left">
-                            <h6>Co-Founder of company</h6>
-                        </div>
-                        <ul class="social_7 mt-3">
-                            <li><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
-                            <li><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
-                            <li><a href="#twitter"><span class="fa fa-instagram"></span></a></li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 column">
-                    <a href="#url"><img class="img img-responsive" src="~/Templates/go-trip-starter/assets/images/t3.jpg" alt=""></a>
-                    <h4><a href="#url">Steve smith</a></h4>
-                    <div class="w3l-team-7_bottom">
-                        <div class="w3l-team-7_bottom-left">
-                            <h6>Manager of company</h6>
-                        </div>
-                        <ul class="social_7 mt-3">
-                            <li><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
-                            <li><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
-                            <li><a href="#twitter"><span class="fa fa-instagram"></span></a></li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 column">
-                    <a href="#url"><img class="img img-responsive" src="~/Templates/go-trip-starter/assets/images/t4.jpg" alt=""></a>
-                    <h4><a href="#url">Steve smith</a></h4>
-                    <div class="w3l-team-7_bottom">
-                        <div class="w3l-team-7_bottom-left">
-                            <h6>Manager of company</h6>
-                        </div>
-                        <ul class="social_7 mt-3">
-                            <li><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
-                            <li><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
-                            <li><a href="#twitter"><span class="fa fa-instagram"></span></a></li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </div>

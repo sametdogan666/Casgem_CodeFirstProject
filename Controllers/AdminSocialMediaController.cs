@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace Casgem_CodeFirstProject.Controllers
 {
-    public class SocialMediaController : Controller
+    public class AdminSocialMediaController : Controller
     {
         private readonly TravelContext _travelContext = new TravelContext();
 

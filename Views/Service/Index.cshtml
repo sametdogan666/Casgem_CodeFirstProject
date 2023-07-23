@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!--
+   Author: W3layouts
+   Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+@Html.Action("PartialNavbar", "Default")
+
+<body id="home">
+
+    @Html.Action("PartialScripts", "Default")
+
+    @Html.Action("PartialHeader", "Default")
+
+    <!-- breadcrumbs -->
+    <section class="w3l-inner-banner-main">
+        <div class="about-inner services editContent">
+            <div class="container">
+
+                <div class="breadcrumbs-sub">
+                    <ul class="breadcrumbs-custom-path">
+                        <li class="right-side propClone">
+                            <a href="/Default/Index/" class="editContent">Ana Sayfa <span class="fa fa-angle-right" aria-hidden="true"></span></a>
+                            <p>
+                        </li>
+                        <li class="active editContent">Hizmetler</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+<!-- breadcrumbs //-->
+
+    @Html.Action("PartialInnerService")
+
+    @Html.Action("PartialOuterService")
+
+    @Html.Action("PartialFooter", "Default")
+
+
+
+</body>
+
+</html>

@@ -144,6 +144,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\AdminSocialMediaController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="DAL\Context\TravelContext.cs" />
     <Compile Include="DAL\Entities\AboutFirstBlog.cs" />
     <Compile Include="DAL\Entities\AboutSecondBlog.cs" />
@@ -473,6 +474,9 @@
     <Content Include="Views\AdminAboutThirdBlog\Index.cshtml" />
     <Content Include="Views\AdminAboutThirdBlog\AddBlog.cshtml" />
     <Content Include="Views\AdminAboutThirdBlog\UpdateBlog.cshtml" />
+    <Content Include="Views\Service\Index.cshtml" />
+    <Content Include="Views\Service\PartialInnerService.cshtml" />
+    <Content Include="Views\Service\PartialOuterService.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,25 @@
+﻿@model Casgem_CodeFirstProject.DAL.Entities.ServiceInnerService
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Servis Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.Id, new { @class = "form-control" })
+    <br />
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Servis Icon</label>
+    @Html.TextBoxFor(x => x.IconClass, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Servis Güncelle</button>
+    <a href="/AdminServiceInnerService/Index/" class="btn btn-secondary">Değişikliklerden Vazgeç</a>
+</form>
+>
+

@@ -1,0 +1,25 @@
+﻿@model Casgem_CodeFirstProject.DAL.Entities.ServiceInnerService
+
+@{
+    ViewBag.Title = "AddService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hizmet Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Hizmet Icon</label>
+    @Html.TextBoxFor(x => x.IconClass, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Servis Kaydet</button>
+    <a href="/AdminServiceInnerService/Index/" class="btn btn-secondary">Değişikliklerden Vazgeç</a>
+</form>
+
+
+

@@ -137,6 +137,7 @@
     <Compile Include="Controllers\AdminExploreController.cs" />
     <Compile Include="Controllers\AdminGuideController.cs" />
     <Compile Include="Controllers\AdminMessageController.cs" />
+    <Compile Include="Controllers\AdminServiceInnerServiceController.cs" />
     <Compile Include="Controllers\AdminSpecificationController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -483,6 +484,9 @@
     <Content Include="Views\Service\Index.cshtml" />
     <Content Include="Views\Service\PartialInnerService.cshtml" />
     <Content Include="Views\Service\PartialOuterService.cshtml" />
+    <Content Include="Views\AdminServiceInnerService\Index.cshtml" />
+    <Content Include="Views\AdminServiceInnerService\AddService.cshtml" />
+    <Content Include="Views\AdminServiceInnerService\UpdateService.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

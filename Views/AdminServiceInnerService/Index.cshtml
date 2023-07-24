@@ -1,0 +1,34 @@
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.ServiceInnerService>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hizmetler Sayfası İç Servis İşlemleri</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Servis Icon</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.IconClass</td>
+            <td><a href="/AdminServiceInnerService/UpdateService/@item.Id" class="btn btn-outline-success">Güncelle</a></td>
+            <td><a href="/AdminServiceInnerService/DeleteService/@item.Id" class="btn btn-outline-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/AdminServiceInnerService/AddService/" class="btn btn-outline-primary">Yeni Servis Ekle</a>
+
+

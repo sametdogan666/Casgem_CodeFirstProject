@@ -1,4 +1,5 @@
-﻿using Casgem_CodeFirstProject.DAL.Context;
+﻿using System.Linq;
+using Casgem_CodeFirstProject.DAL.Context;
 using System.Web.Mvc;
 
 namespace Casgem_CodeFirstProject.Controllers
@@ -14,7 +15,9 @@ namespace Casgem_CodeFirstProject.Controllers
 
         public PartialViewResult PartialInnerService()
         {
-            return PartialView();
+            var values = _travelContext.ServiceInnerServices.ToList();
+
+            return PartialView(values);
         }
 
         public PartialViewResult PartialOuterService()

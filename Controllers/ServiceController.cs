@@ -22,7 +22,9 @@ namespace Casgem_CodeFirstProject.Controllers
 
         public PartialViewResult PartialOuterService()
         {
-            return PartialView();
+            var values = _travelContext.ServiceOuterServices.ToList();
+
+            return PartialView(values);
         }
     }
 }

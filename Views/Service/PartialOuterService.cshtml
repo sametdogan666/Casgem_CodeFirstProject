@@ -1,14 +1,17 @@
-﻿<section class="w3l-services-two" id="services">
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.ServiceOuterService>
+
+
+<section class="w3l-services-two" id="services">
     <div class="service-single-page editContent">
         <div class="container">
             <div class="gallery-image row">
-
+                @foreach(var item in Model){
                 <div class="img-box col-lg-4 col-md-6">
-                    <img src="~/Templates/go-trip-starter/assets/images/b2.jpg" alt="product" class="img-responsive ">
-                    <h5 class="mt-2"><a href="about.html">Turkey Grenada</a></h5>
-                    <p class="para">4 Tours available</p>
+                    <img src="@item.ImageUrl" alt="product" class="img-responsive ">
+                    <h5 class="mt-2" style="color:white">@item.Title</h5>
+                    <p class="para">@item.Description</p>
                 </div>
-
+                }
 
             </div>
         </div>
